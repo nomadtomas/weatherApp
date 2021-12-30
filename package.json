@@ -4,7 +4,7 @@
   "description": "",
   "main": "config.js",
   "scripts": {
-    "start": "nodemon scr/app.js"
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "",
