@@ -1,8 +1,9 @@
 const request = require('request')
-const constants = require('../../config')
+require('dotenv').config()
+// const constants = require('../../config')
 
 const forecast = (latitude, longitude, callback) => {
-    const url = 'http://api.weatherstack.com/current?access_key='+ constants.weatherAppKeys.weatherKey +'&query=' + latitude + ',' + longitude + '&units=f'
+    const url = 'http://api.weatherstack.com/current?access_key='+ process.env.WEATHER_API_KEY +'&query=' + latitude + ',' + longitude + '&units=f'
     
     request({ url: url, json: true }, (error, { body }) => {
         if (error) {
